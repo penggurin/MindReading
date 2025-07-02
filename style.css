@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;;
+}
+
+button {
+    padding: 5px;
+    margin: 5px;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+}
+
+.loading-container {
+  width: 100%;
+  max-width: 400px;
+  height: 20px;
+  border: 2px solid #555;
+  margin: 10px auto;
+  display: none;
+}
+
+.loading-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  transition: width 2s;
+}
+.main-container {
+  position: relative;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.explosion-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* So it doesn't block clicks */
+  z-index: 10;
+}
+
+.explosion-img {
+  display: none;
+  width: 200px;
+}
+
+.loading-container {
+  width: 100%;
+  max-width: 400px;
+  height: 20px;
+  border: 2px solid #555;
+  margin: 10px auto;
+  display: none;
+}
+
+.loading-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  transition: width 2s;
+}
