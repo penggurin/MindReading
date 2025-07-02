@@ -14,6 +14,10 @@ const loadingSteps = [
 ];
 
 button.onclick = function () {
+    if (input.value.trim() === "") {
+        return; // Do nothing if input is empty
+    }
+
     label.textContent = "";
     explosion.style.display = "none";
     loadingContainer.style.display = "block";
@@ -35,7 +39,7 @@ button.onclick = function () {
     setTimeout(() => {
         loadingContainer.style.display = "none";
         explosion.style.display = "block";
-        explosionSound.currentTime = 0; // Rewind if replaying
+        explosionSound.currentTime = 0;
         explosionSound.play();
         label.textContent = `You were thinking of NUMBER ${input.value}!!! 🤯😱`;
 
@@ -46,3 +50,4 @@ button.onclick = function () {
         clearInterval(progressInterval);
     }, 8000);
 };
+    
